@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>newrelic - UI apps</comment>
+<entry key="createdBy">rajashekarperala</entry>
+<entry key="name">codechallange.ui.apps</entry>
+<entry key="created">2018-05-28T16:46:32.484-0500</entry>
+<entry key="groupId">com.newrelic</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">newrelic Content Package</entry>
+<entry key="description">UI apps package for newrelic</entry>
+<entry key="artifactId">codechallange.ui.apps</entry>
+<entry key="path">/etc/packages/newrelic Content Package/codechallange.ui.apps.zip</entry>
+</properties>

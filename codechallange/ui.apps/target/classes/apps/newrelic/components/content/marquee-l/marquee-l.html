@@ -1,0 +1,42 @@
+<!--/*MarqueeL component */-->
+<section class="hero " style="background-image: url(${properties.bgImageAssetRef || '/content/dam/newrelic/en/assets/images/syntheticsbg.jpg' @ context='uri'});">
+   <div class="container">
+   <div class="row">
+   <div class="col-sm-12 col-md-7 ">
+      <div class="hero-inner">
+         <div class="valign-outer">
+            <div class="valign-inner">
+			   <div class = "section-logo">
+                   <sly data-sly-resource="${@path='logo', resourceType='newrelic/components/structure/logo' }" />
+    		   </div>
+				<h1 data-sly-element="${properties.type}"><strong>${properties.sectionTitle || 'Catch problems before your customers do' }</strong></h1>
+               <div class="ctas">
+                  <span>
+					<sly data-sly-use.link="${'./../../utils/Linkchecker.js' @ link=properties.buttonLink1}">
+                      <a href="${link @ context='uri'}" class="btn btn-primary">
+						${properties.btnLabel1 || 'Start a Free Trial'}
+                      </a>
+					</sly>
+                  </span>
+                  <span>
+					<sly data-sly-use.link="${'./../../utils/Linkchecker.js' @ link=properties.buttonLink2}">
+                      <a href="${link @ context='uri'}" class="btn btn-default">
+						${properties.btnLabel2 || 'Request Demo'}
+                      </a>
+					</sly>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-img col-sm-12 col-md-5 hidden-sm hidden-xs">
+      <div class="padding-zero">
+         <div>
+            <div>
+			<img src="${properties.imageAssetRef || '/content/dam/newrelic/en/assets/images/syntheticsfg.jpg' @ context='uri'}" alt="${properties.alt || 'Synthetics'}"/>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

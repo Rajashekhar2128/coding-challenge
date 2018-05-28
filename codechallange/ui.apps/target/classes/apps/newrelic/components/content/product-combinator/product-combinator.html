@@ -1,0 +1,24 @@
+<div class="p06-product-combinations">
+   <section id="productCombos" class="section slider-section bg-dark" style="background-image: url(${properties.bgImageAssetRef || '/content/dam/newrelic/en/assets/images/background-synthetics.jpg' @ context='uri'});">
+      <div class="container clearfix">
+         <div class="row">
+            <div class="col-sm-12 col-md-5">
+               <h2 data-sly-element="${properties.type}" >${properties.sectionTitle || 'See how New Relic Synthetics works with our other products'}</h2>
+            </div>
+            <div class="col-sm-12 col-md-7">
+               <div class="slider-wrapper clearfix" id="media-slideshow">
+                  <div id="per-combo-template" class="white per-combo-template" data-sly-use.tabResources="${'../../../utils/List.js' @ multifieldName='tab-items'}" data-sly-list.tab="${tabResources}">
+                     <span class="${tabList.first ? 'cycle-pager-active' : '' @ context='styleString'}" data-link-index="${tabList.index}"><img src="${tab.properties.tabImage @ context='uri'}" class="nav"></span>
+                  </div>
+                  <div class="slider cycle-slideshow" data-sly-use.tabResources="${'../../../utils/List.js' @ multifieldName='tab-items'}" data-sly-list.tab="${tabResources}">
+                     <div class="cell cycle-slide ${tabList.first ? 'cycle-sentinel' : '' @ context='styleString'}" data-content-index="${tabList.index}">
+                        <p class="header" data-sly-test="${tab.properties.heading}">${tab.properties.heading}</p>
+                        <p data-sly-test="${tab.properties.content}">${tab.properties.content}</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</div>

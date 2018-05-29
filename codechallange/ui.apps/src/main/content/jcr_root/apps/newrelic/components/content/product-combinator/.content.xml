@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Product Combinator"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <tab1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}false">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <bg-img
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        fieldLabel="Background Image"
+                                        fileNameParameter="./bgImageAssetName"
+                                        fileReferenceParameter="./bgImageAssetRef"
+                                        mimeTypes="[image]"
+                                        multiple="{Boolean}false"
+                                        name="./bgImageAsset"
+                                        uploadUrl="${suffix.path}"
+                                        useHTML5="{Boolean}true"/>
+                                    <sectiontitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Enter the section title"
+                                        fieldLabel="Section Title"
+                                        name="./sectionTitle"/>
+                                    <type
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Type / Size"
+                                        name="./type">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <h2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H2 (Default)"
+                                                value="h2"/>
+                                            <h3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H3"
+                                                value="h3"/>
+                                            <h4
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H4"
+                                                value="h4"/>
+                                            <h5
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H5"
+                                                value="h5"/>
+                                        </items>
+                                    </type>
+                                    <tab-set
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Tab Content"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <tab-content
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Click + to add a new item"
+                                                name="./tabs">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    margin="{Boolean}true"
+                                                    name="./tab-items">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <img
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Select image from dam"
+                                                            fieldLabel="Tab Image"
+                                                            name="./tabImage"
+                                                            required="{Boolean}true"/>
+                                                        <heading
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Enter tab content heading"
+                                                            fieldLabel="Heading"
+                                                            name="./heading"/>
+                                                        <text
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                            fieldDescription="Enter tab content text"
+                                                            fieldLabel="Content"
+                                                            name="./content"/>
+                                                    </items>
+                                                </field>
+                                            </tab-content>
+                                        </items>
+                                    </tab-set>
+                                </items>
+                            </column>
+                        </items>
+                    </tab1>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
